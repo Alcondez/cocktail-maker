@@ -21,3 +21,6 @@
 - [react-navigation](https://reactnavigation.org/docs/getting-started) : To handle navigation within the app
 - [react-redux](https://react-redux.js.org/introduction/getting-started)
 - [redux-toolkit](https://redux-toolkit.js.org/introduction/getting-started) : To reduce boilerplate when working with redux
+
+## List Performance
+If a large number of data is expected to be rendered on the search page, a [virtualizedlist](https://reactnative.dev/docs/virtualizedlist) could be implemented to just render a set number of items at a time.
