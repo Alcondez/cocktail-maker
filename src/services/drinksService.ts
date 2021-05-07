@@ -14,7 +14,6 @@ const searchDrinks = async (query: string): Promise<Drink[]> => {
             }
         })
     } catch (error) {
-        console.log('ERROR', error)
         throw(error)
     }
 }

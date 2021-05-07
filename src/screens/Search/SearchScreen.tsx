@@ -11,7 +11,6 @@ const SearchScreen = () => {
     const {fetching, drinks} = useSelector((state: RootState) => state.app);
     const updateSearch = useCallback((query: string) => {
         setSearchedValue(query);
-        console.log(query)
         if (query.length > 2) {
             dispatch(queryDrinks(query));
         }

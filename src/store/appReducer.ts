@@ -16,7 +16,6 @@ export const queryDrinks = createAsyncThunk(
     'app/searchDrinks',
     async (query: string, thunkAPI) => {
       const response = await drinksService.searchDrinks(query)
-      console.log('RESPONSE', response);
       return response;
     }
   )
