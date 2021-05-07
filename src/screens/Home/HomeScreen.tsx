@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 import {
-  Alert,
-  Image,
   SafeAreaView,
   StatusBar,
   Text,
@@ -21,12 +19,13 @@ const HomeScreen: FC<any> = ({navigation}) => {
                 color="white"
               />
           <Text style={{ marginTop: 10, marginBottom: 20}}>
-          <Text style={{fontWeight: 'bold', color: 'white'}}>CockTail</Text><Text style={{ color: 'white'}}>Finder</Text>
+            <Text style={{fontWeight: 'bold', color: 'white', fontSize: 20}}>CockTail</Text>
+            <Text style={{ color: 'white', fontSize: 20}}>Finder</Text>
           </Text>
           
          <Button
-            buttonStyle={{backgroundColor: 'white', paddingHorizontal: 20}}
-            titleStyle={{color: "black", marginLeft: 20}}
+            buttonStyle={{backgroundColor: 'white', paddingHorizontal: 30, borderRadius: 5}}
+            titleStyle={{color: "#545454", marginLeft: 20}}
             icon={
               <Icon
                 name="search"
@@ -34,7 +33,7 @@ const HomeScreen: FC<any> = ({navigation}) => {
                 color='#ef476f'
               />
             }
-            title="Button with icon component"
+            title="Search for your favorite cocktail"
             onPress={() => navigation.navigate('Search')}
           />
          </View>

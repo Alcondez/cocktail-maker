@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { ActivityIndicator, SafeAreaView, ScrollView, View } from 'react-native';
-import { Avatar, Card, ListItem, SearchBar, Text } from 'react-native-elements';
+import { Avatar, Card, ListItem, SearchBar } from 'react-native-elements';
 import { useDispatch, useSelector } from 'react-redux';
 import { Drink, queryDrinks } from '../../store/appReducer';
 import { RootState } from '../../store/store';
@@ -19,7 +19,7 @@ const SearchScreen = () => {
         <SafeAreaView style={{ flex: 1, backgroundColor: '#ef476f'}}>
             <SearchBar
                 platform="android"
-                placeholder="Type Here..."
+                placeholder="Search"
                 onChangeText={updateSearch}
                 value={searchValue}
             />
@@ -37,10 +37,10 @@ const SearchScreen = () => {
                         drinks && drinks.map((drink: Drink) => (
                             <Card containerStyle={{padding: 0}} key={drink.id}>
                                 <ListItem>
-                                <Avatar rounded source={{uri: drink.imageUrl}} />
-                                <ListItem.Content>
-                                <ListItem.Title>{drink.name}</ListItem.Title>
-                                </ListItem.Content>
+                                    <Avatar size="large" rounded source={{uri: drink.imageUrl}} />
+                                    <ListItem.Content>
+                                        <ListItem.Title style={{fontSize: 20}}>{drink.name}</ListItem.Title>
+                                    </ListItem.Content>
                                 </ListItem>
                             </Card>
                         ))
